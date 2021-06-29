@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-board-db587": {
+      "hosting": {
+        "my-app": [
+          "kanban-board-db587"
+        ]
+      }
+    }
+  }
+}
