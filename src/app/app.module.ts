@@ -21,6 +21,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     RegisterComponent,
     NavbarComponent,
+    BoardComponent,
   ],
   imports: [
     BrowserModule,
