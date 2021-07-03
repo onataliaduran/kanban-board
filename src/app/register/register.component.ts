@@ -28,7 +28,14 @@ export class RegisterComponent implements OnInit {
   onRegister() {
     const { email, password } = this.registerForm.value;
     this.authService.register(email, password)
-      .subscribe(response => this.router.navigate(['/board']));
+      .subscribe(
+        (response) => {
+          this.router.navigate(['/board'])
+        },
+        // (error: Response) => {
+        //   console.log('Unexpected error on registration', error); 
+        // }
+      );
   }
 
 }

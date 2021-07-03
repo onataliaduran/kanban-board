@@ -21,9 +21,12 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    console.log('login values:', this.loginForm.value);
     const { email, password } = this.loginForm.value;
-    this.authService.login(email, password);
+    this.authService.login(email, password)
+      .subscribe(
+        (response) => console.log('login response', response),
+        (error: Response) => console.log('Unexpected error on login', error) 
+      );
   }
 
 }
