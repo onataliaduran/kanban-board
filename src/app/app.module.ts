@@ -1,5 +1,5 @@
 // ANGULAR MODULES
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -7,7 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // APP MODULES
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './material/material.module'
+import { MaterialModule } from './material/material.module';
+
+// ENTITIES
+import { Global } from './error-handlers/global/global';
 
 // FIREBASE
 import { AngularFireModule } from "@angular/fire";
@@ -43,7 +46,7 @@ import { BoardComponent } from './board/board.component';
     AppRoutingModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{provide: ErrorHandler, useClass: Global}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

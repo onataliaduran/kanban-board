@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.loginForm.value;
     this.authService.login(email, password)
       .subscribe(
-        (response) => console.log('login response', response),
+        response => console.log('login response', response),
         (error: Response) => console.log('Unexpected error on login', error) 
       );
   }

@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
     const { email, password } = this.registerForm.value;
     this.authService.register(email, password)
       .subscribe(
-        (response) => {
+        response => {
           this.router.navigate(['/board'])
         },
         // (error: Response) => {
