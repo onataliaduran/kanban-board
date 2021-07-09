@@ -19,7 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatButtonModule,
     MatIconModule
-  ], 
+  ],
   exports: [
     MatToolbarModule,
     MatCardModule,

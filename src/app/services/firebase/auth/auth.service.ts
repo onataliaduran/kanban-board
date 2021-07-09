@@ -22,15 +22,15 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    return defer(() => from(this.auth.signInWithEmailAndPassword( email, password)));
+    return defer(() => from(this.auth.signInWithEmailAndPassword(email, password)));
   }
 
   logout() {
-    // logic for logout
+    return defer(() => from(this.auth.signOut()));
   }
-  
+
   isLoggedIn() {
-    return this.auth.authState;
+    return this.auth.onAuthStateChanged( user => user ? true : false);
   }
 
 }

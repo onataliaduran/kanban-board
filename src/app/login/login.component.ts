@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {} 
+  constructor(private fb: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(email, password)
       .subscribe(
         response => console.log('login response', response),
-        (error: Response) => console.log('Unexpected error on login', error) 
+        (error: Response) => console.log('Unexpected error on login', error)
       );
   }
 

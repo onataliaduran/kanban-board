@@ -1,14 +1,14 @@
 <header>
     <mat-toolbar class="nav">
         <div class="nav__leftItems">
-            <button mat-icon-button>
-                <mat-icon>menu</mat-icon>
-            </button>
             <div routerLink="/home">
                 <div>Kanban Board</div>
             </div>
         </div>   
         <div class="nav__rightItems">
+            <button mat-flat-button color="accent" class="nav__link" routerLink="/home">
+                Logout
+            </button>
             <button mat-flat-button color="accent" class="nav__link" routerLink="/login">
                 Login
             </button>

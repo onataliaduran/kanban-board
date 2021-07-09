@@ -9,12 +9,12 @@ import { AuthService } from './../services/firebase/auth/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  
+
   registerForm: FormGroup;
 
   constructor(
-    private router: Router, 
-    private fb: FormBuilder, 
+    private router: Router,
+    private fb: FormBuilder,
     private authService: AuthService
   ) { }
 
@@ -30,10 +30,10 @@ export class RegisterComponent implements OnInit {
     this.authService.register(email, password)
       .subscribe(
         response => {
-          this.router.navigate(['/board'])
+          this.router.navigate(['/board']);
         },
         // (error: Response) => {
-        //   console.log('Unexpected error on registration', error); 
+        //   console.log('Unexpected error on registration', error);
         // }
       );
   }
